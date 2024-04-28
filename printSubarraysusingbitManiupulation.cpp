@@ -7,6 +7,7 @@ void printsubarrays(int arr[],int n ){
       if(i & (1<<j)){
         cout<<arr[j]<<" ";
       }
+      
     }
     cout<<endl;
     count++;
