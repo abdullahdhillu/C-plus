@@ -1,26 +1,32 @@
 #include<iostream>
 #include<cmath>
 using namespace std;
+bool oddeven(int n){
+  if(n%2 == 0){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+using namespace std;
 int main()
 {
-  int rows,cols,min=0;
-  cout<<"Enter rows and columns : ";
-  cin>>rows>>cols;
-  int arr[rows][cols];
-  cout<<"Enter "<<rows*cols<<" values in first matrix: "<<endl;
-  for (int  i = 0; i < rows; i++){
-    for (int j = 0; j < cols; j++){
-        cin>>arr[i][j];
+  int a;
+  cout<<"Enter a number to check wether its odd or even ";
+  cin>>a;
+  if(a >= 1){
+     if(oddeven(a)){
+    cout<<"Entered number is even";
+    }
+    else{
+    cout<<"Entered number is odd";
     }
   }
-  min = arr[0][0];
-  for (int  i = 0; i < rows; i++){
-    for (int j = 0; j < cols; j++){
-        if(min>arr[i][j]){
-          min = arr[i][j];
-        }
-    }
+  else{
+    cout<<" Invalid input ";
   }
-  cout<<"Smallest value in matrix is : "<<min;
+ 
+
   return 0;
 }

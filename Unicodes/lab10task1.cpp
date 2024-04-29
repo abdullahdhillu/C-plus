@@ -1,25 +1,38 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>
 using namespace std;
+void calculator(int a , int b , char operation ){
+  if (operation == '+'){
+    cout<< a + b;
+  }
+  else if (operation == '-'){
+    cout<< a - b;
+  }
+   else if (operation == '*'){
+    cout<< a * b;
+  }
+   else if (operation == '/'){
+    cout<< a / b;
+  }
+  else{
+    cout<<"Invalid input";
+  }
+}
 int main()
-{ 
-  int rows,cols;
-  cout<<"Enter rows and columns : ";
-  cin>>rows>>cols;
-  int arr[rows][cols];
-  for (int  i = 0; i < rows; i++){
-    for (int j = 0; j < cols; j++){
-        cout<<"Enter data in ["<<i<<"]["<<j<<"] : ";
-        cin>>arr[i][j];
-    }
-  }
-  cout<<"\n \n \n ";
-  for (int  i = 0; i < rows; i++){
-    for (int j = 0; j < cols; j++){
-        cout<<"Value at ["<<i<<"]["<<j<<"] is : ";
-        cout<<arr[i][j]<<endl;
-    }
-  }
+{
+  int num1, num2;
+  char operation;
+
+  cout << "Enter first integer: ";
+  cin >> num1;
+
+  cout << "Enter second integer: ";
+  cin >> num2;
+
+  cout<<"Enter operation to be performed: ";
+
+  cin>>operation;
+  
+  calculator( num1 , num2 , operation);
   
   return 0;
 }
